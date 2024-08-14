@@ -44,10 +44,10 @@ void jTreeToCSV(TString inputFile, TString outputFolder) {
 			double phi = trk->Phi();
 			double eta = trk->Eta();
 			double pT = trk->Pt();
-			double E = trk->E();
+			double M = trk->M();
 
 			if (TMath::Abs(eta)>etaMax || pT>pTmax || pT<pTmin) continue;
-			csvFile << Form("%.5f, %.5f, %.5f, %.5f\n", phi, eta, pT, E);
+			csvFile << Form("%.5f, %.5f, %.5f, %.5f\n", phi, eta, pT, M);
 		}
 		csvFile.close();
 	}
